@@ -1,0 +1,266 @@
+/* Definições globais e reset */
+:root {
+    --cor-fundo-principal: #0a0a0a; /* Fundo muito escuro */
+    --cor-fundo-secundario: #1a1a1a; /* Fundo de seção/card um pouco mais claro */
+    --cor-texto-principal: #ffffff; /* Texto branco */
+    --cor-texto-secundario: #a0a0a0; /* Texto cinza claro para detalhes */
+    --cor-destaque: #3cb371; /* Verde forte para destaque/botões principais */
+    --cor-destaque-claro: #4CAF50; /* Um verde mais claro para hover */
+    --cor-borda-card: #333333; /* Borda ou separador escuro */
+    --font-principal: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-principal);
+    background-color: var(--cor-fundo-principal);
+    color: var(--cor-texto-principal);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Cabeçalho (Header) --- */
+header {
+    background-color: var(--cor-fundo-principal);
+    padding: 15px 0;
+    border-bottom: 1px solid var(--cor-borda-card); /* Linha fina divisória */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--cor-destaque); /* Cor verde para o logo "ONG" */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--cor-texto-secundario);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--cor-texto-principal);
+}
+
+/* Botão "Entrar" no cabeçalho */
+.btn-entrar {
+    background-color: transparent;
+    border: 1px solid var(--cor-destaque);
+    color: var(--cor-destaque);
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.btn-entrar:hover {
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto-principal);
+}
+
+/* --- Seção Principal (Hero) --- */
+.hero-section {
+    background-color: var(--cor-fundo-principal);
+    padding: 80px 0;
+}
+
+.hero-content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero-texto {
+    flex: 1;
+    max-width: 50%; /* Ocupa a metade do espaço */
+}
+
+.hero-texto h2 {
+    font-size: 44px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--cor-texto-principal);
+}
+
+.hero-texto p {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 30px;
+    color: var(--cor-texto-secundario);
+}
+
+.hero-imagem {
+    flex: 1;
+    max-width: 50%; /* Ocupa a outra metade do espaço */
+    border-radius: 8px; /* Borda sutil na imagem */
+    overflow: hidden;
+}
+
+.principal-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Estilo dos botões de ação */
+.botoes a {
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-right: 15px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    display: inline-block;
+}
+
+.btn-doar {
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto-principal);
+    border: 1px solid var(--cor-destaque);
+}
+
+.btn-doar:hover {
+    background-color: var(--cor-destaque-claro);
+    border-color: var(--cor-destaque-claro);
+}
+
+.btn-voluntario {
+    background-color: transparent;
+    color: var(--cor-destaque);
+    border: 1px solid var(--cor-destaque);
+}
+
+.btn-voluntario:hover {
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto-principal);
+}
+
+
+/* --- Seção de Projetos --- */
+
+.main-content {
+    background-color: var(--cor-fundo-secundario); /* Fundo da seção de projetos mais claro que o principal */
+    padding-bottom: 80px;
+}
+
+.projetos {
+    padding-top: 50px;
+}
+
+.section-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: var(--cor-texto-principal);
+    padding-left: 20px; /* Alinhamento com o texto principal */
+}
+
+.grid-projetos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* Estilo do Card */
+.card {
+    background-color: var(--cor-fundo-principal); /* Fundo do card mais escuro */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Mantém proporção igual para todas */
+    object-fit: cover;    /* Corta suavemente o excesso sem distorcer */
+    display: block;
+    border-bottom: 1px solid var(--cor-borda-card); /* separador sutil */
+}
+
+.card-info {
+    padding: 20px;
+    padding-bottom: 10px;
+}
+
+.card-info h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: var(--cor-texto-principal);
+}
+
+.categoria {
+    font-size: 14px;
+    color: var(--cor-texto-secundario);
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+/* Estilo de Progresso (Rodapé do Card) */
+.progresso {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-top: 1px solid var(--cor-borda-card); /* Linha divisória no card */
+    margin-top: 10px;
+}
+
+.arrecadado {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--cor-texto-principal);
+}
+
+.meta {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--cor-texto-secundario);
+}
+
+/* --- Rodapé (Footer) --- */
+footer {
+    background-color: var(--cor-fundo-principal);
+    color: var(--cor-texto-secundario);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    border-top: 1px solid var(--cor-borda-card);
+
+    
+}
