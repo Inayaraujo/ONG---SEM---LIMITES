@@ -5,26 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Seja Voluntário — ONG</title>
   <meta name="description" content="Página de voluntariado - participe dos projetos da ONG" />
-  <style>
-    :root{--bg:#07080a;--card:#0f1720;--muted:#9aa3a8;--accent:#24a148;--glass:rgba(255,255,255,0.03)}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial;background:linear-gradient(180deg,#050608 0%, #0b0f12 100%);color:#e6eef1;-webkit-font-smoothing:antialiased}
-    .wrap{max-width:1000px;margin:36px auto;padding:20px}
-    .header{display:flex;align-items:center;gap:16px;margin-bottom:18px}
-    .brand{font-weight:700;color:var(--accent);font-size:20px}
-    .subtitle{color:var(--muted);font-size:14px}
-    .card{background:var(--card);padding:20px;border-radius:14px;box-shadow:0 8px 30px rgba(0,0,0,0.6)}
-    .grid{display:grid;grid-template-columns:1fr 350px;gap:20px}
-    .title{font-size:28px;margin:0 0 6px}
-    .lead{color:var(--muted);margin:0 0 12px}
-    .btn{display:inline-block;background:var(--accent);color:#fff;padding:10px 16px;border-radius:10px;border:0;text-decoration:none;font-weight:600;cursor:pointer}
-    input, select, textarea{background:#06080a;border:1px solid rgba(255,255,255,0.03);padding:10px;border-radius:8px;color:#fff;width:100%}
-    label{display:block;margin-top:12px;color:var(--muted);font-size:13px}
-    .muted{color:var(--muted)}
-    .imgbox img{width:100%;height:auto;border-radius:8px;display:block}
-    footer{margin-top:18px;color:var(--muted);font-size:13px}
-    @media (max-width:880px){.grid{grid-template-columns:1fr}.card{padding:16px}}
-  </style>
+  
+  <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
   <div class="wrap">
@@ -63,7 +45,7 @@
 
             <div style="margin-top:14px">
               <button class="btn" type="submit">Enviar inscrição</button>
-              <a class="btn" href="/index.html" style="background:transparent;border:1px solid rgba(255,255,255,0.04);color:#dbeee0;margin-left:8px;padding:10px 14px">Voltar</a>
+              <a class="btn" href="index.html" style="background:transparent;border:1px solid rgba(255,255,255,0.04);color:#dbeee0;margin-left:8px;padding:10px 14px">Voltar</a>
             </div>
           </form>
         </div>
@@ -71,4 +53,16 @@
         <aside>
           <div class="imgbox">
             <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800" alt="Voluntários em ação" />
-            <p class="muted" style="margin-top:10px">Voluntários ajudam a ministrar oficinas, orientar alunos e apoiar eventos soci
+            <p class="muted" style="margin-top:10px">Voluntários ajudam a ministrar oficinas, orientar alunos e apoiar eventos</p> </div>
+        </aside>
+      </div>
+    </div>
+    
+    <footer>
+        <p class="muted" style="font-size: 13px;">&copy; 2025 ONG</p>
+    </footer>
+  </div>
+
+  <script src="voluntario.js"></script>
+</body>
+</html>
