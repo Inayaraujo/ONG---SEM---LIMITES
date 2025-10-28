@@ -6,7 +6,6 @@
   <title>Apoiar a educação — ONG</title>
   <meta name="description" content="Página de doação - campanha Apoiar a educação" />
 
-  <!-- link para o CSS externo -->
   <link rel="stylesheet" href="estilo.css">
 </head>
 
@@ -52,12 +51,12 @@
 
             <div style="margin-top:14px">
               <button class="btn" type="submit">Doar</button>
-              <a class="btn" href="/cgi-bin/donate.cgi" style="background:transparent;border:1px solid rgba(255,255,255,0.04);color:#dbeee0;margin-left:8px;padding:10px 14px">Abrir página de doação</a>
+              <a class="btn" href="index.html" style="background:transparent;border:1px solid rgba(255,255,255,0.04);color:#dbeee0;margin-left:8px;padding:10px 14px">Voltar</a>
             </div>
           </form>
 
           <div class="note">
-            Ao doar, você será redirecionado para a página segura de confirmação. Esta é uma demo conectada ao CGI em <code>/cgi-bin/donate.cgi</code>.
+            Ao doar, você será redirecionado para a página segura de confirmação. Esta é uma demo.
           </div>
         </div>
 
@@ -84,13 +83,12 @@
 
       <footer>
         <div class="muted">
-          Dados de demo — para armazenar doações reais, configure o CGI <code>/cgi-bin/donate.cgi</code> com permissão de escrita no servidor.
+          Dados de demo — Funcionalidades de doação real exigiriam um back-end.
         </div>
       </footer>
     </div>
   </div>
 
-  <!-- script -->
   <script>
     const goal = 5000.00;
     let collected = 3200.00;
@@ -124,7 +122,10 @@
         alert('Por favor informe seu nome.');
         return false;
       }
-      return true;
+      // Para a demo, previne o envio para o /cgi-bin que não existe
+      e.preventDefault();
+      alert('Obrigado pela sua doação! (Modo de demonstração)');
+      console.log('Doação de', v, 'por', name);
     });
   </script>
 </body>
