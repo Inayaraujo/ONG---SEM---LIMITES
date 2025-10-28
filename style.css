@@ -199,6 +199,7 @@ nav ul li {
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s;
+    text-decoration: none; /* Remove sublinhado de links em cards */
 }
 
 .card:hover {
@@ -261,6 +262,4 @@ footer {
     padding: 20px 0;
     font-size: 14px;
     border-top: 1px solid var(--cor-borda-card);
-
-    
 }
